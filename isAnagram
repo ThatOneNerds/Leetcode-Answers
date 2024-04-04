@@ -1,0 +1,19 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_iterated = []
+        t_iterated = []
+        
+        for i in s:
+            s_iterated.append(i)
+        
+        for i in t:
+            t_iterated.append(i)
+
+        s_iterated.sort()
+        t_iterated.sort()
+
+        if s_iterated == t_iterated:
+            return True
+        
+        if s_iterated != t_iterated:
+            return False
